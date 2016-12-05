@@ -17,6 +17,10 @@ app.get('/', stormpath.getUser, function(req, res) {
               title: 'Welcome'
             });
 });
+
+app.get('/notes', stormpath.apiAuthenticationRequired, function(req, res) {
+      res.json({notes: req.user.customData.notes || "This is your notebook. Edit this to start saving your notes!"})
+});
  
 app.on('stormpath.ready',function(){
       console.log('Stormpath Ready');
