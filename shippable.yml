@@ -3,7 +3,7 @@ node_js:
   - "6"
 env:
   global:
-    - APP_NAME=sb-node-stormpath-project
+    - APP_NAME=jl214-node-stormpath-project
 build:
   on_success:
     - git push -f git@heroku.com:$APP_NAME.git master
