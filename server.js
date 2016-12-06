@@ -35,7 +35,9 @@ app.post('/notes', stormpath.apiAuthenticationRequired, function(req, res) {
       req.user.customData.notes = req.body.notes
       req.user.customData.save()
       res.status(200).end()
-})
+});
+
+app.use('/profile',stormpath.loginRequired,require('./profile')());
 
 app.on('stormpath.ready',function(){
       console.log('Stormpath Ready');
