@@ -12,4 +12,5 @@ then we can run the app.
   $ npm server.js
 ```
 
-
+## CI
+Setup to use either Travis CI or Shippable.
