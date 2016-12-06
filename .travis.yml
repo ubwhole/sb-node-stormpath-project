@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - '6'
+
+# To add Heroku API Key
+# heroku login
+# if no .travis.yml, touch .travis.yml
+# travis encrypt $(heroku auth:token) --add deploy.api_key
+# Add app: map into .travis.yml
+deploy:
+  app:  jl214-node-stormpath-project
+  api_key:
+    secure: wKpMa51cdn+w9beBxZ9GS/EGo869+/qvN1Kjgteqj0lGx+9Co676PbBZf/9SoQe95Oh2qoD1haP12idOw6VGEQCwxyYTG9ZjlCeHFv1MU00qhpoTP8b8ANIlvhA1AwBQaiKFGHi3sitAOfymo9MwY1v25AuwPaF84QP8s2eutw7s2kk8jI7TwZ/SGW/b4nqS0q7eB3ccHplInMtBn9zVGosqLUEZ86G8cnvIORCldZTwk5KVXayQSRjrFRYcm42lg30hJB9L+QXkHCGvqstCg1TTQcmPIyB2mbj7KHXmRtRUIg0sDtWMTFAT2WPDtD43QlaU0UMwIZ2XBl4J/aMMAqIqQLUnoAXdWHP4yvroDdeD92KuuBrxbB4kisCKJ7/3AH8Kw44cJufsNTG+5GvwLwn2eqRWjRvWdEV58QZZ72llUQAkNZcEm+X/aB2+np1+pzdxttSldQzKOe+6SaoCkBJy9ax6m0Yu0zbL0eFBkLnYK9W2yEsCrg57ZBaYmmRuDrQ1gIH5glscflBNOni80lKmVq0AhJkoXaXiCvYu9dwLutLQYL2BSRW8bm084x376BUHwGAopVOIDzplf3ns9gP0a60DMz7oH31/DeIqp+GPjutjGKaGXrb7OMumcmB5xy4IgvYrb1sPJVm6MweJR45k2ZGo+SnH2LNN8C7eeQU=
